@@ -19,14 +19,16 @@ int main() {
         }
     }
     for(i = 0; i < tl; i++) {
-        printf("\n");
+        
         for(j = 0; j < tc; j++) {
             printf("%d", matriz[i][j]);
-            if(j <= tc - 1) {
+            if(j < tc - 1) {
                 printf(" ");
+                
             }
-
+         
         }
+        printf("\n");
     }
     for(i = 0; i < tl; i++) {
         free(matriz[i]);
