@@ -31,7 +31,7 @@ int main() {
          
         }
         if(i < tl -1){
-        printf("\n");
+        printf('\n');
         
         }
         
