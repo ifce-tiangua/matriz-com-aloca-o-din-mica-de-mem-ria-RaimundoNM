@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
+
 int main() {
     int **matriz, tc, tl, i, j;
     scanf("%d %d", &tl, &tc);
@@ -9,6 +10,9 @@ int main() {
     }
     for(i = 0; i < tl; i++) {
         matriz[i] = (int*)malloc(tc * sizeof(int));
+        if(matriz[i] == NULL){
+        printf("[matriz vazia]");
+        }
     }
 
     for(i = 0; i < tl; i++) {
