@@ -25,10 +25,16 @@ int main() {
             if(j < tc - 1) {
                 printf(" ");
                 
+                
             }
+            
          
         }
+        if(i < tl -1){
         printf("\n");
+        
+        }
+        
     }
     for(i = 0; i < tl; i++) {
         free(matriz[i]);
