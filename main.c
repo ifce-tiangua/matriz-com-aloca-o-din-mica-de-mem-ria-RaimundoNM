@@ -1,4 +1,4 @@
-n#include<stdio.h>
+#include<stdio.h>
 #include<stdlib.h>
 int main() {
     int **matriz, tc, tl, i, j;
@@ -19,7 +19,11 @@ int main() {
     for(i = 0; i < tl; i++) {
         printf("\n");
         for(j = 0; j < tc; j++) {
-            printf("%d ", matriz[i][j]);
+            printf("%d", matriz[i][j]);
+            if(j < tc - 1) {
+                printf(" ");
+            }
+
         }
     }
     for(i = 0; i < tl; i++) {
