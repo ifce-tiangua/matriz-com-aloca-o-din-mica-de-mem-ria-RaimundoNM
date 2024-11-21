@@ -10,9 +10,7 @@ int main() {
     }
     for(i = 0; i < tl; i++) {
         matriz[i] = (int*)malloc(tc * sizeof(int));
-        if(matriz[i] == NULL){
-        printf("[matriz vazia]");
-        }
+
     }
 
     for(i = 0; i < tl; i++) {
@@ -24,7 +22,7 @@ int main() {
         printf("\n");
         for(j = 0; j < tc; j++) {
             printf("%d", matriz[i][j]);
-            if(j < tc - 1) {
+            if(j <= tc - 1) {
                 printf(" ");
             }
 
