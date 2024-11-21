@@ -1,4 +1,4 @@
-#include<stdio.h>
+n#include<stdio.h>
 #include<stdlib.h>
 int main() {
     int **matriz, tc, tl, i, j;
