@@ -1,47 +1,30 @@
 #include<stdio.h>
 #include<stdlib.h>
-
-
 int main() {
-    int **matriz, taml, tamc, i, j, k;
-    scanf("%d  %d", &taml, &tamc);
-    matriz = (int**)malloc(taml * sizeof(int*));
+    int **matriz, tc, tl, i, j;
+    scanf("%d %d", &tl, &tc);
+    matriz = (int**)malloc(tl * sizeof(int*));
     if(matriz == NULL) {
         printf("[matriz vazia]");
-        
+    }
+    for(i = 0; i < tl; i++) {
+        matriz[i] = (int*)malloc(tc * sizeof(int));
     }
 
-    for(i = 0; i < taml; i++) {
-        matriz[i] = (int*)malloc(tamc * sizeof(int));
-        if(matriz[i] == NULL) {
-            for(k = 0; k < i; k++) {
-                free(matriz[k]);
-            }
-            free(matriz);
-            printf("[matriz vazia]");
-            
-        }
-
-    }
-
-    for(i = 0; i < taml; i++) {
-        for(j = 0; j < tamc; j++) {
+    for(i = 0; i < tl; i++) {
+        for(j = 0; j < tc; j++) {
             scanf("%d", &matriz[i][j]);
         }
     }
-
-    for(i = 0; i < taml; i++) {
-        for(j = 0; j < tamc; j++) {
+    for(i = 0; i < tl; i++) {
+        printf("\n");
+        for(j = 0; j < tc; j++) {
             printf("%d ", matriz[i][j]);
         }
-        printf("\n");
-
     }
-    for(i = 0; i < taml; i++) {
+    for(i = 0; i < tl; i++) {
         free(matriz[i]);
     }
     free(matriz);
-
     return 0;
 }
-
