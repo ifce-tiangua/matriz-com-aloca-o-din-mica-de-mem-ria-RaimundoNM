@@ -40,5 +40,5 @@ int main() {
         free(matriz[i]);
     }
     free(matriz);
-    return 0;
+    
 }
